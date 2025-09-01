@@ -9,8 +9,8 @@ export default function Navbar() {
           <Image
             src="/startup-logo-dark.png"
             alt="Startup logo"
-            width={120}
-            height={28}
+            width={600}
+            height={140}
             className="block dark:hidden h-7 w-auto"
             priority
           />
