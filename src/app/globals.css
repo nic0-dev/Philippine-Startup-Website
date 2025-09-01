@@ -41,12 +41,33 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
+  --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+  @keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
+    }
+  }
+  @keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);
+    }
+  15%, 35% {
+    transform: translateZ(0) rotate(90deg);
+    }
+  65%, 85% {
+    transform: translateZ(0) rotate(270deg);
+    }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+    }
+  }
 }
 
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.147 0.004 49.25);
+  --foreground: #0c0a09;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.147 0.004 49.25);
   --popover: oklch(1 0 0);
@@ -119,4 +140,49 @@
   body {
     @apply bg-background text-foreground;
   }
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes btn-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Brand palette CSS custom properties for convenient reuse */
+:root {
+  --brand-red: #EE2323;
+  --brand-blue: #0F4D93;
+  --brand-dark: #171717;
+  --brand-white: #FFFFFF;
+  --brand-yellow: #FBEA1E;
+}
+
+/* Override theme tokens with brand palette */
+:root {
+  --background: var(--brand-white);
+  --foreground: var(--brand-dark);
+  --primary: var(--brand-blue);
+  --primary-foreground: var(--brand-white);
+  --secondary: var(--brand-yellow);
+  --secondary-foreground: var(--brand-dark);
+  --accent: var(--brand-red);
+  --accent-foreground: var(--brand-white);
+}
+
+.dark {
+  --background: var(--brand-dark);
+  --foreground: var(--brand-white);
+  --primary: var(--brand-yellow);
+  --primary-foreground: var(--brand-dark);
+  --secondary: var(--brand-blue);
+  --secondary-foreground: var(--brand-white);
+  --accent: var(--brand-red);
+  --accent-foreground: var(--brand-white);
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }
