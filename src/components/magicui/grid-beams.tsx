@@ -101,7 +101,7 @@ const LightRay = React.memo<LightRayProps>(
           } as React.CSSProperties
         }
         animate={{
-          opacity: [0.3, 0.7, 0.3],
+          opacity: [0.1, 0.5, 0.15],
           transform: [
             `translateX(-50%) rotate(${rotation}deg)`,
             `translateX(-50%) rotate(${rotation + (isStrongerSway ? 1 : 0.5)}deg)`,
@@ -126,6 +126,8 @@ const LightRay = React.memo<LightRayProps>(
     );
   },
 );
+
+LightRay.displayName = "LightRay";
 
 export const GridBeams: React.FC<GridBeamsProps> = ({
   children,

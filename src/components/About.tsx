@@ -4,7 +4,7 @@ export default function About() {
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-24 py-16 sm:py-20">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <p className="font-mono uppercase text-xs sm:text-sm tracking-widest text-[var(--brand-red)] py-4">Why It Matters</p>
+            <p className="font-mono uppercase text-xs sm:text-sm tracking-widest text-[var(--color-3)] py-4">Why It Matters</p>
             <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight"></h1>
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">About PHSW 2025</h2>
             <p className="mt-3 text-black/70 dark:text-white/70">

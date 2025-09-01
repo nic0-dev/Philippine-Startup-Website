@@ -33,7 +33,7 @@ export default function Hero() {
         <GridBeams
             className="bg-none"
             gridSize={48}
-            gridColor={"color-mix(in oklch, var(--brand-blue) 10%, transparent)"}
+            gridColor={"color-mix(in oklch, var(--brand-yellow) 5%, transparent)"}
             rayCount={8}
             rayOpacity={0.25}
             raySpeed={1}
@@ -60,18 +60,18 @@ export default function Hero() {
                 priority
             />
         </div>
-                        {/* Subtle bottom-left radial glow above beams & map, below text */}
-                        <div
-                            className="pointer-events-none absolute bottom-0 left-0 z-[8] w-[72vw] max-w-[980px] h-[46vh]"
-                            aria-hidden
-                            style={{
-                                background:
-                                    "radial-gradient(60% 60% at 0% 100%, color-mix(in oklch, var(--brand-yellow) 65%, var(--brand-red) 35%) 0%, color-mix(in oklch, var(--brand-yellow) 35%, transparent) 44%, transparent 72%)",
-                                filter: "blur(34px)",
-                                opacity: 0.22,
-                                transform: "translate(-6%, 8%)",
-                            }}
-                        />
+        {/* Subtle bottom-left radial glow above beams & map, below text */}
+        <div
+            className="pointer-events-none absolute bottom-0 left-0 z-[8] w-[72vw] max-w-[980px] h-[46vh]"
+            aria-hidden
+            style={{
+                background:
+                    "radial-gradient(60% 60% at 0% 100%, color-mix(in oklch, var(--brand-yellow) 65%, var(--brand-red) 35%) 0%, color-mix(in oklch, var(--brand-yellow) 35%, transparent) 44%, transparent 72%)",
+                filter: "blur(34px)",
+                opacity: 0.22,
+                transform: "translate(-6%, 8%)",
+            }}
+        />
         <div className="relative z-10 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-24 py-12 sm:py-18 mt-16">
             <p className="font-mono uppercase pb-4 text-xs sm:text-sm tracking-widest text-[var(--brand-blue-contrast)] text-center sm:text-left">7th Philippine Startup Week</p>
             <div className="relative flex w-full sm:w-auto justify-center sm:justify-start mx-auto sm:mx-0">
@@ -112,6 +112,10 @@ export default function Hero() {
                     />
                 </div>
             </div>
+            {/* Event date */}
+            <p className="mt-2 font-mono uppercase text-xs sm:text-sm tracking-widest text-[var(--brand-blue-contrast)] text-center sm:text-left mx-auto ml-[-1rem] sm:ml-0">
+                November 10-14, 2025
+            </p>
             <p className="mt-4 text-base sm:text-md text-black/70 dark:text-white/70 max-w-2xl text-center sm:text-left mx-auto ml-[-1rem] sm:ml-0">
             Igniting Filipino innovation. The country’s largest startup conference uniting founders, investors, and partners.
             </p>
