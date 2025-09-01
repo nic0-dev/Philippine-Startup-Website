@@ -72,20 +72,20 @@ export default function Hero() {
                 transform: "translate(-6%, 8%)",
             }}
         />
-        <div className="relative z-10 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-24 py-12 sm:py-18 mt-16">
+        <div className="relative z-10 mx-auto max-w-screen-xl px-8 lg:px-24 py-12 sm:py-18 mt-16">
             <p className="font-mono uppercase pb-4 text-xs sm:text-sm tracking-widest text-[var(--brand-blue-contrast)] text-center sm:text-left">
                 <span className="block sm:inline">7th Philippine Startup Week</span>
                 <span className="hidden sm:inline">&nbsp;|&nbsp;</span>
                 <span className="block sm:inline">November 10-14, 2025</span>
             </p>
             <div className="relative flex w-full sm:w-auto justify-center sm:justify-start mx-auto sm:mx-0">
-                <div className="relative inline-flex w-fit flex-row gap-3 md:gap-4 items-baseline">
+                <div className="relative inline-flex w-fit max-w-full flex-row flex-wrap justify-center sm:justify-start gap-2 sm:gap-3 md:gap-4 gap-y-1 items-baseline">
                     <Image
                         src="/ph-logo-dark.png"
                         alt="PHSWP Logo"
                         width={600}
                         height={140}
-                        className="block dark:hidden h-12 md:h-14 lg:h-18 w-auto"
+                        className="block dark:hidden h-10 sm:h-12 md:h-14 lg:h-18 w-auto"
                         sizes="(max-width: 640px) 120px, (max-width: 768px) 144px, (max-width: 1024px) 160px, 192px"
                         priority
                     />
@@ -94,11 +94,11 @@ export default function Hero() {
                         alt="PHSWP Logo"
                         width={600}
                         height={40}
-                        className="hidden dark:block h-12 md:h-14 lg:h-18 w-auto"
+                        className="hidden dark:block h-10 sm:h-12 md:h-14 lg:h-18 w-auto"
                         sizes="(max-width: 640px) 120px, (max-width: 768px) 144px, (max-width: 1024px) 160px, 192px"
                         priority
                     />
-                    <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight relative inline-block text-center sm:text-left">
+                    <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl md:text-6xl leading-[1.1] font-bold tracking-tight relative inline-block text-center sm:text-left">
                         <span className="relative">Startup Week 2025</span>
                     </h1>
                     {/* Underline spans only the logo + title group */}
@@ -117,7 +117,7 @@ export default function Hero() {
                 </div>
             </div>
             {/* Event date */}
-            <p className="mt-4 text-base sm:text-md text-black/70 dark:text-white/70 max-w-2xl text-center sm:text-left mx-auto ml-[-1rem] sm:ml-0">
+            <p className="mt-4 text-sm sm:text-md text-black/70 dark:text-white/70 max-w-2xl text-center sm:text-left mx-auto ml-[-1rem] sm:ml-0">
             Igniting Filipino innovation. The country’s largest startup conference uniting founders, investors, and partners.
             </p>
             {/* Countdown grid */}

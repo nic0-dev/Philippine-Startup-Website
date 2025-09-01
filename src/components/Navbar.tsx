@@ -8,23 +8,44 @@ export default function Navbar() {
     <header className="fixed top-0 z-50 w-full border-b border-black/10 dark:border-white/10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label="Startup home">
-          {/* Light mode: use the dark logo; Dark mode: use the light logo */}
-          <Image
-            src="/startup-logo-dark.png"
-            alt="Startup logo"
-            width={600}
-            height={140}
-            className="block dark:hidden h-7 w-auto"
-            priority
-          />
-          <Image
-            src="/startup-logo.png"
-            alt="Startup logo"
-            width={600}
-            height={140}
-            className="hidden dark:block h-7 w-auto"
-            priority
-          />
+          {/* Mobile (smaller): PHSWP logo variants */}
+          <span className="sm:hidden">
+            <Image
+              src="/ph-logo-dark.png"
+              alt="PHSWP logo"
+              width={600}
+              height={140}
+              className="block dark:hidden h-6 w-auto"
+              priority
+            />
+            <Image
+              src="/ph-logo.png"
+              alt="PHSWP logo"
+              width={600}
+              height={140}
+              className="hidden dark:block h-6 w-auto"
+              priority
+            />
+          </span>
+          {/* ≥ sm: Startup logo variants */}
+          <span className="hidden sm:inline">
+            <Image
+              src="/startup-logo-dark.png"
+              alt="Startup logo"
+              width={600}
+              height={140}
+              className="block dark:hidden h-7 w-auto"
+              priority
+            />
+            <Image
+              src="/startup-logo.png"
+              alt="Startup logo"
+              width={600}
+              height={140}
+              className="hidden dark:block h-7 w-auto"
+              priority
+            />
+          </span>
         </Link>
         <div className="flex items-center gap-3">
             <ul className="hidden md:flex items-center gap-6 text-sm">
