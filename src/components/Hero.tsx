@@ -73,7 +73,11 @@ export default function Hero() {
             }}
         />
         <div className="relative z-10 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-24 py-12 sm:py-18 mt-16">
-            <p className="font-mono uppercase pb-4 text-xs sm:text-sm tracking-widest text-[var(--brand-blue-contrast)] text-center sm:text-left">7th Philippine Startup Week</p>
+            <p className="font-mono uppercase pb-4 text-xs sm:text-sm tracking-widest text-[var(--brand-blue-contrast)] text-center sm:text-left">
+                <span className="block sm:inline">7th Philippine Startup Week</span>
+                <span className="hidden sm:inline">&nbsp;|&nbsp;</span>
+                <span className="block sm:inline">November 10-14, 2025</span>
+            </p>
             <div className="relative flex w-full sm:w-auto justify-center sm:justify-start mx-auto sm:mx-0">
                 <div className="relative inline-flex w-fit flex-row gap-3 md:gap-4 items-baseline">
                     <Image
@@ -113,9 +117,6 @@ export default function Hero() {
                 </div>
             </div>
             {/* Event date */}
-            <p className="mt-2 font-mono uppercase text-xs sm:text-sm tracking-widest text-[var(--brand-blue-contrast)] text-center sm:text-left mx-auto ml-[-1rem] sm:ml-0">
-                November 10-14, 2025
-            </p>
             <p className="mt-4 text-base sm:text-md text-black/70 dark:text-white/70 max-w-2xl text-center sm:text-left mx-auto ml-[-1rem] sm:ml-0">
             Igniting Filipino innovation. The country’s largest startup conference uniting founders, investors, and partners.
             </p>
