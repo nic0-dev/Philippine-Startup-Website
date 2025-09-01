@@ -62,7 +62,18 @@
     transform: translateZ(0) rotate(360deg);
     }
   }
-}
+  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+  --color-color-5: var(--color-5);
+  --color-color-4: var(--color-4);
+  --color-color-3: var(--color-3);
+  --color-color-2: var(--color-2);
+  --color-color-1: var(--color-1)
+;
+  @keyframes rainbow {
+  0% {
+    background-position: 0%;}
+  100% {
+    background-position: 200%;}}}
 
 :root {
   --radius: 0.625rem;
@@ -97,6 +108,11 @@
   --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
   --sidebar-border: oklch(0.923 0.003 48.717);
   --sidebar-ring: oklch(0.709 0.01 56.259);
+  --color-1: oklch(66.2% 0.225 25.9);
+  --color-2: oklch(60.4% 0.26 302);
+  --color-3: #aa5109;
+  --color-4: oklch(60.214% 0.09929 224.539);
+  --color-5: oklch(61.456% 0.11478 98.962);
 }
 
 .dark {
@@ -131,6 +147,11 @@
   --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.553 0.013 58.071);
+  --color-1: oklch(66.2% 0.225 25.9);
+  --color-2: oklch(60.4% 0.26 302);
+  --color-3: #ff9640;
+  --color-4: oklch(80.2% 0.134 225);
+  --color-5: oklch(89.878% 0.16587 95.713);
 }
 
 @layer base {
@@ -157,6 +178,29 @@
   --brand-dark: #171717;
   --brand-white: #FFFFFF;
   --brand-yellow: #FBEA1E;
+}
+
+/* Subtle gradient tints derived from brand colors */
+:root {
+  --grad-blue: color-mix(in oklch, var(--brand-blue) 35%, transparent);
+  --grad-red: color-mix(in oklch, var(--brand-red) 35%, transparent);
+  --grad-yellow: color-mix(in oklch, var(--brand-yellow) 40%, transparent);
+}
+.dark {
+  /* Slightly adjust strength for dark backgrounds */
+  --grad-blue: color-mix(in oklch, var(--brand-blue) 45%, transparent);
+  --grad-red: color-mix(in oklch, var(--brand-red) 45%, transparent);
+  --grad-yellow: color-mix(in oklch, var(--brand-yellow) 50%, transparent);
+}
+
+/* Dark-mode contrast variants for brand colors (non-destructive)
+   Use var(--brand-blue-contrast) for text to ensure readability on #171717. */
+:root {
+  --brand-blue-contrast: var(--brand-blue);
+}
+.dark {
+  /* Lighter blue for sufficient contrast on dark backgrounds */
+  --brand-blue-contrast: #8AB8FF;
 }
 
 /* Override theme tokens with brand palette */

@@ -9,7 +9,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
   return (
-    <div className="font-sans">
+    <div className="font-sans overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
