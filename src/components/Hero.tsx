@@ -122,19 +122,19 @@ export default function Hero() {
             </p>
             {/* Countdown grid */}
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg">
-            <div className="rounded-xl border border-black/10 dark:border-white/10 p-4 text-center">
+            <div className="rounded-xl bg-white/20 dark:bg-black/20 border border-black/10 dark:border-white/10 p-4 text-center">
                 <div className="text-3xl sm:text-4xl font-bold tabular-nums">{timeLeft.days}</div>
                 <div className="mt-1 text-xs tracking-widest text-black/70 dark:text-white/70">DAYS</div>
             </div>
-            <div className="rounded-xl border border-black/10 dark:border-white/10 p-4 text-center">
+            <div className="rounded-xl bg-white/20 dark:bg-black/20 border border-black/10 dark:border-white/10 p-4 text-center">
                 <div className="text-3xl sm:text-4xl font-bold tabular-nums">{String(timeLeft.hours).padStart(2, "0")}</div>
                 <div className="mt-1 text-xs tracking-widest text-black/70 dark:text-white/70">HOURS</div>
             </div>
-            <div className="rounded-xl border border-black/10 dark:border-white/10 p-4 text-center">
+            <div className="rounded-xl bg-white/20 dark:bg-black/20 border border-black/10 dark:border-white/10 p-4 text-center">
                 <div className="text-3xl sm:text-4xl font-bold tabular-nums">{String(timeLeft.minutes).padStart(2, "0")}</div>
                 <div className="mt-1 text-xs tracking-widest text-black/70 dark:text-white/70">MINUTES</div>
             </div>
-            <div className="rounded-xl border border-black/10 dark:border-white/10 p-4 text-center">
+            <div className="rounded-xl bg-white/20 dark:bg-black/20 border border-black/10 dark:border-white/10 p-4 text-center">
                 <div className="text-3xl sm:text-4xl font-bold tabular-nums">{String(timeLeft.seconds).padStart(2, "0")}</div>
                 <div className="mt-1 text-xs tracking-widest text-black/70 dark:text-white/70">SECONDS</div>
             </div>
