@@ -38,11 +38,7 @@ export default function FoundingOrganizers() {
               {/* Card content */}
               <div className="relative z-10 rounded-2xl border border-black/10 bg-white text-neutral-900 p-6 sm:p-8 flex items-center justify-center h-40 sm:h-44 md:h-48">
                 <div
-                  className={`relative ${
-                    i === 2
-                      ? "size-32 sm:size-36 md:size-64" // DICT larger
-                      : "size-28 sm:size-32 md:size-36"
-                  }`}
+                  className="relative size-28 sm:size-32 md:size-36"
                 >
                   <Image
                     src={logo.src}
@@ -50,7 +46,6 @@ export default function FoundingOrganizers() {
                     fill
                     className="object-contain"
                     sizes="(max-width: 640px) 10rem, (max-width: 768px) 14rem, 16rem"
-                    priority={i === 0}
                   />
                 </div>
               </div>
