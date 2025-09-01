@@ -48,7 +48,7 @@ export default function Hero() {
                 alt=""
                 width={800}
                 height={800}
-                className="block dark:hidden lg:w-[46vw] max-w-[42rem] h-auto opacity-20 select-none"
+                className="block dark:hidden w-[75vw] lg:w-[46vw] max-w-[42rem] h-auto opacity-20 select-none"
                 priority
             />
             <Image
