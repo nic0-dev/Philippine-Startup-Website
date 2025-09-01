@@ -1,1 +1,1 @@
-export const LUMA_REGISTRATION_URL = "https://lu.ma/your-event-slug"; // TODO: replace with real Luma page
+export const LUMA_REGISTRATION_URL = "https://luma.com/"; // TODO: replace with real Luma page
