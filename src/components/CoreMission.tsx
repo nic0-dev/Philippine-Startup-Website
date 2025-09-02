@@ -46,7 +46,7 @@ const TRACKS: Track[] = [
   {
     key: "showcase",
     title: "Showcase",
-    tagline: "your tech startup at PHSW24",
+    tagline: "your tech startup at PHSW25",
     summary:
       "Pitch to thousands of attendees, enablers, VCs, and accelerators across the country for early- and growth-stage startups.",
   colorVar: "var(--color-5)",
